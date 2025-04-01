@@ -6,3 +6,6 @@
 ```bash
 uvicorn main:app
 ```
+
+### 远程调用方式
+[mcp-remote](https://github.com/geelen/mcp-remote)
