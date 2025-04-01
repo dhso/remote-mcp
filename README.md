@@ -4,7 +4,7 @@
 
 ### RUN
 ```bash
-uvicorn main:app
+uvicorn app.main:app
 ```
 
 ### 远程调用方式
