@@ -6,12 +6,12 @@ import httpx
 mcp = FastMCP("Remote MCP Server", "0.1.0")
 
 @mcp.resource("greeting://{name}")
-def get_greeting(name: str) -> str:
+async def get_greeting(name: str) -> str:
     """Get a personalized greeting"""
     return f"Hello, {name}!"
 
 @mcp.tool()
-def add(a: int, b: int) -> int:
+async def add(a: int, b: int) -> int:
     """Add two numbers"""
     return a + b
 
@@ -26,7 +26,7 @@ async def search_web_by_searxng(q: str) -> str:
         return response.json()
     
 @mcp.prompt()
-def review_code(code: str) -> str:
+async def review_code(code: str) -> str:
     return f"Please review this code:\n\n{code}"
 
 routes=[
